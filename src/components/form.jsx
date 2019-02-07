@@ -48,8 +48,7 @@ export default class NameForm extends React.Component {
 
     handleGeneratePdf() {
         saveState(this.state);
-        var doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-        console.log(doc.getFontList());
+        var doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });        
         doc.addFileToVFS('DejavuSerif.ttf', dejavu_serif_font);
         doc.addFont('DejavuSerif.ttf', 'DejavuSerif', 'normal');
         doc.setFont('DejavuSerif');
@@ -75,6 +74,9 @@ export default class NameForm extends React.Component {
         var sum = 0;
         for (var i = 0; i < this.state.transits.length; i++) {
             var t = this.state.transits[i];
+            if (!t.to) {
+                continue;
+            }
             var record = this.data[t.to.value];
             data.push([t.date, t.from, record.city, record.distance + " km", record.distance * PRICE_KM + " Kč"]);
             sum = sum + record.distance * PRICE_KM;
@@ -164,16 +166,16 @@ export default class NameForm extends React.Component {
 
                 <div className="form-group">
                     <div className="form-row">
-                        <div className="col-md-3 mb-3">
+                        <div className="col-md-3 mb-2">
                             <label htmlFor="contractDate">Datum smlouvy</label>
                             <input type="text" id="contractDate" className="form-control input-md" value={this.state.contractDate} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte datum" />
                             <small className="form-text text-muted">Typicky dnešní datum</small>
                         </div>
-                        <div className="col-md-3 mb-3">
+                        <div className="col-md-3 mb-2">
                             <label htmlFor="account">Číslo účtu</label>
                             <input type="text" id="account" className="form-control input-md" value={this.state.account} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte číslo účtu" />
                         </div>
-                        <div className="col-md-6 mb-3">
+                        <div className="col-md-6 mb-2">
                             <label htmlFor="action">Událost</label>
                             <input type="text" id="action" className="form-control input-md" value={this.state.action} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte událost" />
                             <small className="form-text text-muted">Událost, akce nebo soutěž, které se smlouva týká</small>
@@ -184,20 +186,20 @@ export default class NameForm extends React.Component {
                 {this.state.transits.map((transit, idx) => (
                     <div className="form-group" key={`divTransit${idx}`}>
                         <div className="form-row">
-                            <div className="col-md-1 mb-3">
+                            <div className="col-md-1 mb-0">
                                 <label>{`#${idx + 1}`}</label>
                             </div>
-                            <div className="col-md-3 mb-3">
+                            <div className="col-md-3 mb-1">
                                 <input type="text" id={`transitDate${idx}`} className="form-control input-md" value={transit.date} onChange={(e) => this.handleTransitDateChange(idx, e.target.value)} placeholder="Datum přepravy" />
                             </div>
-                            <div className="col-md-2 mb-3">
+                            <div className="col-md-2 mb-1">
                                 <input type="text" id={`transitFrom${idx}`} className="form-control input-md" value={transit.from} readOnly />
                             </div>
 
-                            <div className="col-md-3 mb-3">
+                            <div className="col-md-3 mb-1">
                                 <Select value={transit.to} onChange={(e) => this.handleTransitToChange(idx, e)} options={this.getDistances()} placeholder="Vyberte cíl" />
                             </div>
-                            <div className="col-md-3 mb-3">
+                            <div className="col-md-1 mb-1">
                                 <button type="button" id={`transitRemove${idx}`} onClick={() => this.handleRemoveTransit(idx)} className="btn btn-primary">Odebrat</button>
                             </div>
                         </div>

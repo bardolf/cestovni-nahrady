@@ -216,7 +216,7 @@ export var data = [
         "distance": 146
     },
     {
-        "club": "JAWA Bordce",
+        "club": "JAWA Brodce",
         "city": "Týnec nad Sázavou",
         "address": " Okružní 520, Týnec nad Sázavou",
         "distance": 50

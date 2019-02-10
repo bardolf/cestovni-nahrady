@@ -31,14 +31,22 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: "babel-loader"
-            },            
+            },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
                     'file-loader?name=images/[name].[ext]',
                 ]
-            }
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader',
+                type: 'javascript/auto'
+            },
         ]
+    },
+    node: {
+        fs: 'empty'
     },
     plugins: [
         HtmlWebpackPluginConfig,

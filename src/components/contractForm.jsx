@@ -1,14 +1,11 @@
 import React from 'react';
 import Select from 'react-select';
-import jsPDF from 'jspdf';
 import autotable from 'jspdf-autotable';
-import { data } from './data.js'
-import { dejavu_serif_font } from '../customFonts'
-import { loadState, saveState } from '../localStorage';
+import ContractGenerator from '../contractGenerator';
+import { saveState, loadState } from '../localStorage';
+import clubService from '../clubService';
 
-const PRICE_KM = 3.5;
-
-export default class NameForm extends React.Component {
+export default class ContractForm extends React.Component {
     constructor(props) {
         super(props);
 
@@ -20,16 +17,17 @@ export default class NameForm extends React.Component {
                 account: '',
                 transits: [],
             };
-        }
-        this.data = data.sort();
-        this.distances = [];
-        for (var i = 0; i < this.data.length; i++) {
-            this.distances.push({ label: this.data[i].club, value: i });
-        }
+        }        
+        
+        this.transitOptions = [];
+        var data = clubService.getClubs()
+        for (var i = 0; i < data.length; i++) {
+            this.transitOptions.push({ label: data[i].club, value: i });
+        }        
     }
 
-    getDistances() {
-        return this.distances;
+    getTransitOptions() {
+        return this.transitOptions;
     };
 
     handleOnChange(event) {
@@ -48,62 +46,8 @@ export default class NameForm extends React.Component {
 
     handleGeneratePdf() {
         saveState(this.state);
-        var doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });        
-        doc.addFileToVFS('DejavuSerif.ttf', dejavu_serif_font);
-        doc.addFont('DejavuSerif.ttf', 'DejavuSerif', 'normal');
-        doc.setFont('DejavuSerif');
-        doc.setFontType('normal');
-
-        doc.setFontSize(24);
-        doc.text('SMLOUVA', 80, 20);
-        doc.setFontSize(12);
-        doc.text('uzavřená dle §1746 odst. 2 zákona č. 89/2012 Sb., občanského zákoníku, kterou', 10, 35);
-        doc.text('uzavřeli dne ' + this.state.contractDate, 10, 40);
-        doc.text('Klub šachistů Říčany 1925, z.s. se sídlem v Říčanech, zastoupený předsedou', 10, 50);
-        doc.text('ing. Jaroslavem Říhou na straně jedné ', 10, 55);
-        doc.text('a', 100, 65);
-        doc.text('pan/paní ' + this.state.name, 10, 75);
-        doc.text('bytem ' + this.state.address, 10, 80);
-        doc.text('číslo účtu ' + this.state.account, 10, 85);
-        doc.text('(dále jen příjemce) na straně druhé takto: ', 10, 95);
-        doc.text('I.', 100, 105);
-        doc.text('Příjemce se zavazuje zajistit v rámci konání akce ' + this.state.action, 10, 115);
-        doc.text('přepravu na utkání: ', 10, 120);
-
-        var data = [];
-        var sum = 0;
-        for (var i = 0; i < this.state.transits.length; i++) {
-            var t = this.state.transits[i];
-            if (!t.to) {
-                continue;
-            }
-            var record = this.data[t.to.value];
-            data.push([t.date, t.from, record.city, record.distance + " km", record.distance * PRICE_KM + " Kč"]);
-            sum = sum + record.distance * PRICE_KM;
-        }
-
-        doc.autoTable({
-            head: [['Datum', 'Odkud', 'Kam', 'Vzdálenost', 'Úhrada']],
-            body: data,
-            // ...
-
-            startY: 130,
-            styles: { font: "DejavuSerif", fontStyle: "normal" }
-        });
-
-        var offset = 145 + this.state.transits.length * 10;
-        doc.text('II.', 100, offset);
-        doc.text('Klub šachistů Říčany 1925 se zavazuje vyplatit příjemci příspěvek na cestovní výdaje', 10, offset = offset + 10);
-        doc.text('(§4 odst. 1, písm. k zákona č. 586/1992 Sb.) v souvislosti s používáním osobního', 10, offset = offset + 5);
-        doc.text('automobilu ve výši 3,50 Kč(*) za ujetý kilometr tj. celkem: ' + sum + ',- Kč', 10, offset = offset + 5);
-
-        doc.text('...............................', 30, offset = offset + 20);
-        doc.text('...............................', 130, offset);
-        doc.setFontSize(10);
-        doc.text('Podpis příjemce', 35, offset = offset + 5);
-        doc.text('Podpis zástupce z.s.', 135, offset);
-        doc.text('(*) schváleno valnou hromadou dne 23.1.2015', 10, 280);
-        doc.save('cestovni-nahrady.pdf');
+        ContractGenerator.generate(this.state.contractDate, this.state.name, this.state.address,
+            this.state.account, this.state.action, this.state.transits, this.data);
     }
 
     handleAddTransit() {
@@ -197,7 +141,7 @@ export default class NameForm extends React.Component {
                             </div>
 
                             <div className="col-md-3 mb-1">
-                                <Select value={transit.to} onChange={(e) => this.handleTransitToChange(idx, e)} options={this.getDistances()} placeholder="Vyberte cíl" />
+                                <Select value={transit.to} onChange={(e) => this.handleTransitToChange(idx, e)} options={this.getTransitOptions()} placeholder="Vyberte cíl" />
                             </div>
                             <div className="col-md-1 mb-1">
                                 <button type="button" id={`transitRemove${idx}`} onClick={() => this.handleRemoveTransit(idx)} className="btn btn-primary">Odebrat</button>

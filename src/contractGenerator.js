@@ -37,7 +37,7 @@ export default class ContractGenerator {
                 continue;
             }
             var record = clubService.getClub(t.to.label);
-            data.push([t.date, t.from, record.city, record.distance + " km", record.distance * PRICE_KM + " Kč"]);
+            data.push([t.date, t.from, record.club+"\n"+record.address, record.distance + " km", record.distance * PRICE_KM + " Kč"]);
             sum = sum + record.distance * PRICE_KM;
         }
 
@@ -47,10 +47,10 @@ export default class ContractGenerator {
             // ...
 
             startY: 130,
-            styles: { font: "DejavuSerif", fontStyle: "normal" }
+            styles: { font: "DejavuSerif", fontStyle: "normal", fontSize: 9 }
         });
 
-        var offset = 145 + transits.length * 10;
+        var offset = 150 + transits.length * 10;
         doc.text('II.', 100, offset);
         doc.text('Klub šachistů Říčany 1925 se zavazuje vyplatit příjemci příspěvek na cestovní výdaje', 10, offset = offset + 10);
         doc.text('(§4 odst. 1, písm. k zákona č. 586/1992 Sb.) v souvislosti s používáním osobního', 10, offset = offset + 5);

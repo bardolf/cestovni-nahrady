@@ -79,7 +79,7 @@
          "distance":120
       },
       {
-         "club":"TJ Neratovice B",
+         "club":"TJ Neratovice",
          "city":"Neratovice",
          "address":"Neratovice, Kpt. Jaroše 233",
          "distance":74
@@ -91,7 +91,7 @@
          "distance":74
       },
       {
-         "club":"DDM Sokol Nymburk B",
+         "club":"DDM Sokol Nymburk",
          "city":"Nymburk",
          "address":"2.května 968/16, 28802 Nymburk",
          "distance":82
@@ -121,7 +121,7 @@
          "distance":78
       },
       {
-         "club":"ŠK OAZA Praha B",
+         "club":"ŠK OAZA Praha",
          "city":"Praha OAZA",
          "address":"Zasedací mistnost SK OAZA Praha, Jeremenkova 106, Praha 4",
          "distance":40
@@ -165,8 +165,8 @@
       {
          "club":"Šachový klub Příbram",
          "city":"Příbram",
-         "address":"Příbram, Tesaříka 162",
-         "distance":74
+         "address":"Příbram, Gen. R. Tesaříka 162",
+         "distance":134
       },
       {
          "club":"Caissa Roztoky",
@@ -219,7 +219,7 @@
       {
          "club":"JAWA Brodce",
          "city":"Týnec nad Sázavou",
-         "address":" Okružní 520, Týnec nad Sázavou",
+         "address":"Okružní 520, Týnec nad Sázavou",
          "distance":50
       },
       {
@@ -237,20 +237,44 @@
       {
          "club":"TJ Spartak Vlašim",
          "city":"Vlašim",
-         "address":"Sportovní 1570, Sporthotel Vlašim",
+         "address":"Vlašim, Sportovní 1570, Sporthotel Vlašim",
          "distance":92
       },
       {
          "club":"ŠK Zdice",
          "city":"Zdice",
-         "address":"Společenský dům, Husova 369, Zdice",
+         "address":"Zdice, Společenský dům, Husova 369",
          "distance":118
       },
       {
          "club":"ŠK Medvědi Zvole",
          "city":"Zvole",
-         "address":"Náves J. Štulíka 13, Zvole",
+         "address":"Zvole, Náves J. Štulíka 13",
          "distance":40
+      },
+      {
+         "club":"Jiskra Zruč nad Sázavou",
+         "city":"Zruč nad Sázavou",
+         "address":"Zruč nad Sázavou, 5.Května 510",
+         "distance":110
+      },
+      {
+         "club":"ŠK Řevnice",
+         "city":"Řevnice",
+         "address":"Řevnice, Náměstí Jiřího z Poděbrad 2",
+         "distance":80
+      },
+      {
+         "club":"TJ Bohemians Praha",
+         "city":"Praha 10",
+         "address":"Praha 10, Slovenská 2, Spor.hala TJ Bohemians",
+         "distance":40
+      },
+      {
+         "club":"ŠK Spartak Čelákovice",
+         "city":"Čelákovice",
+         "address":"Čelákovice, Sokolovna Masarykova 585",
+         "distance":48
       }
    ]
 }

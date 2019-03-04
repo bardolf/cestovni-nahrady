@@ -275,6 +275,12 @@
          "city":"Čelákovice",
          "address":"Čelákovice, Sokolovna Masarykova 585",
          "distance":48
+      },
+      {
+         "club":"Mníšek pod Brdy",
+         "city":"Mníšek pod Brdy",
+         "address":"Mníšek pod Brdy, V Lipkách 610, Mníšek pod Brdy",
+         "distance":82
       }
    ]
 }

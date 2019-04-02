@@ -281,6 +281,18 @@
          "city":"Mníšek pod Brdy",
          "address":"Mníšek pod Brdy, V Lipkách 610, Mníšek pod Brdy",
          "distance":82
-      }
+      },
+      {
+        "club":"ŠK Líně",
+        "city":"Líně",
+        "address":"Líně, Hornická 848, Obecní dům",
+        "distance":244
+     },
+     {
+        "club":"Vlachovice",
+        "city":"Vlachovice",
+        "address":"Vlachovice 91, 592 31 Vlachovice",
+        "distance":310
+     }
    ]
 }

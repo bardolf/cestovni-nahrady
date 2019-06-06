@@ -292,7 +292,13 @@
         "club":"Vlachovice",
         "city":"Vlachovice",
         "address":"Vlachovice 91, 592 31 Vlachovice",
-        "distance":310
+        "distance":262
+     },
+     {
+        "club":"Zaječice",
+        "city":"Chrudim",
+        "address":"Žižkovo nám. 106, 537 01 Chrudim",
+        "distance":198
      }
    ]
 }

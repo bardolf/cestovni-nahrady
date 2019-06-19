@@ -299,6 +299,12 @@
         "city":"Chrudim",
         "address":"Žižkovo nám. 106, 537 01 Chrudim",
         "distance":180
+     },
+     {
+        "club":"Třešť",
+        "city":"Chrudim",
+        "address":"K Valše 1251/38, 589 01 Třešť",
+        "distance":232
      }
    ]
 }

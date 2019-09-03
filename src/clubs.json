@@ -305,6 +305,12 @@
         "city":"Chrudim",
         "address":"K Valše 1251/38, 589 01 Třešť",
         "distance":232
+     },
+     {
+        "club":"ŠK Plzeň",
+        "city":"Plzeň",
+        "address":"Kongresový sál hotelu LIONS, Zborovská 85/18, Plzeň",
+        "distance":224
      }
    ]
 }

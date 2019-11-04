@@ -311,6 +311,12 @@
         "city":"Plzeň",
         "address":"Kongresový sál hotelu LIONS, Zborovská 85/18, Plzeň",
         "distance":224
+     },
+     {
+        "club":"Kořenov",
+        "city":"Kořenov",
+        "address":"Hotel Příchovice, Kořenov",
+        "distance":245
      }
    ]
 }

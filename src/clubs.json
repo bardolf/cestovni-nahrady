@@ -323,6 +323,12 @@
         "city":"Turnov",
         "address":"Markova 311, Turnov",
         "distance":176
+     },
+     {
+        "club":"SK Slavoj Čáslav A",
+        "city":"Čáslav",
+        "address":"Přemysla Otakara II č.p. 86/1",
+        "distance":116
      }
    ]
 }

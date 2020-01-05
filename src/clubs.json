@@ -280,7 +280,7 @@
          "club":"Mníšek pod Brdy",
          "city":"Mníšek pod Brdy",
          "address":"Mníšek pod Brdy, V Lipkách 610, Mníšek pod Brdy",
-         "distance":82
+         "distance":76
       },
       {
         "club":"ŠK Líně",
@@ -316,7 +316,7 @@
         "club":"Kořenov",
         "city":"Kořenov",
         "address":"Hotel Příchovice, Kořenov",
-        "distance":245
+        "distance":246
      },
      {
         "club":"ŠK Zikuda Turnov",
@@ -329,6 +329,18 @@
         "city":"Čáslav",
         "address":"Přemysla Otakara II č.p. 86/1",
         "distance":116
+     },
+     {
+        "club":"Desko Liberec",
+        "city":"Liberec",
+        "address":"Liberec, Masarykova 3, SPŠSE a VOŠ",
+        "distance":216
+     },
+     {
+        "club":"ŠK AD Jičín",
+        "city":"Jičín",
+        "address":"Jičín Žižkovo nám. 18 Zasedací místnost MÚ",
+        "distance":170
      }
    ]
 }

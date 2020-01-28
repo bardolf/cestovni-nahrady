@@ -341,6 +341,12 @@
         "city":"Jičín",
         "address":"Jičín Žižkovo nám. 18 Zasedací místnost MÚ",
         "distance":170
+     },
+     {
+        "club":"TJ Sokol Pečky",
+        "city":"Pečky",
+        "address":"Tř. Jana Švermy 255, Kulturní dům",
+        "distance":72
      }
    ]
 }

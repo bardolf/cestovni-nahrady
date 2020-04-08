@@ -347,6 +347,12 @@
         "city":"Pečky",
         "address":"Tř. Jana Švermy 255, Kulturní dům",
         "distance":72
+     },
+     {
+        "club":"Kouty nad Desnou",
+        "city":"Kouty nad Desnou",
+        "address":"Hotel Dlouhé Stráně, 788 11 Kouty nad Desnou",
+        "distance":422
      }
    ]
 }

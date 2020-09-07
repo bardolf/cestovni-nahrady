@@ -353,6 +353,12 @@
         "city":"Kouty nad Desnou",
         "address":"Hotel Dlouhé Stráně, 788 11 Kouty nad Desnou",
         "distance":422
+     },
+     {
+        "club":"Šachová akademie VŠTE",
+        "city":"České Budějovice",
+        "address":"Studentská 800/15, 370 05 České Budějovice",
+        "distance":262
      }
    ]
 }

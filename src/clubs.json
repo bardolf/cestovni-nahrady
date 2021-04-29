@@ -359,6 +359,12 @@
         "city":"České Budějovice",
         "address":"Studentská 800/15, 370 05 České Budějovice",
         "distance":262
-     }
+     },
+     {
+      "club":"Sokol Tábor, Vavražov",
+      "city":"Štědronín-Varvažov",
+      "address":"Rekr. středisko Štědronín-Plazy 22, 397 01 Vavražov",
+      "distance":198
+      }
    ]
 }

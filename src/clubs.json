@@ -371,6 +371,12 @@
        "city":"Kouty nad Desnou",
        "address":"Hotel Dlouhé Stráně, 788 11 Kouty nad Desnou",
        "distance":424
+       },
+      {
+       "club":"Šachový klub 64 Plzeň, z.s.",
+       "city":"Plzeň",
+       "address":"U Borského parku 2791/31, Plzeň",
+       "distance":244
        }
       
    ]

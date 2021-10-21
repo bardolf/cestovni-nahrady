@@ -377,7 +377,13 @@
        "city":"Plzeň",
        "address":"U Borského parku 2791/31, Plzeň",
        "distance":244
-       }
+       },
+       {
+        "club":"TJ Jiskra Tanvald",
+        "city":"Tanvald",
+        "address":"Protifašistických bojovníků 336, Tanvald",
+        "distance":244
+        }
       
    ]
 }

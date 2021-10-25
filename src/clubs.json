@@ -127,10 +127,10 @@
          "distance":40
       },
       {
-         "club":"Unichess Underground",
+         "club":"Unichess",
          "city":"Praha ",
          "address":"Pernerova 18, Praha 8",
-         "distance":44
+         "distance":46
       },
       {
          "club":"ŠK PORG Praha",
@@ -383,7 +383,18 @@
         "city":"Tanvald",
         "address":"Protifašistických bojovníků 336, Tanvald",
         "distance":244
+        },
+        {
+        "club":"TJ Kobylisy",
+        "city":"Praha",
+        "address":"PU Školské zahrady 9, Praha 8",
+        "distance":52
+        },
+        {
+        "club":"ŠK Dopravní podnik Praha",
+        "city":"Praha",
+        "address":"Václavské náměstí 782/22, Praha 1",
+        "distance":48
         }
-      
    ]
 }

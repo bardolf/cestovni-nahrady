@@ -395,6 +395,12 @@
         "city":"Praha",
         "address":"Václavské náměstí 782/22, Praha 1",
         "distance":48
+        },
+        {
+        "club":"Robert a Petr šachy, z. s. - Herlíkovice",
+        "city":"Herlíkovice",
+        "address":"Resort Eden Herlíkovice, Za Řekou 370, 543 02 Vrchlabí",
+        "distance":244
         }
    ]
 }

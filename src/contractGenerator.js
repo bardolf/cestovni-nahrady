@@ -2,7 +2,7 @@ import jsPDF from 'jspdf';
 import clubService from './clubService';
 import { dejavu_serif_font } from './customFonts'
 
-const PRICE_KM = 3.5;
+const PRICE_KM = 4.0;
 
 export default class ContractGenerator {
     static generate(contractDate, name, address, account, action, transits) {
@@ -54,14 +54,14 @@ export default class ContractGenerator {
         doc.text('II.', 100, offset);
         doc.text('Klub šachistů Říčany 1925 se zavazuje vyplatit příjemci příspěvek na cestovní výdaje', 10, offset = offset + 10);
         doc.text('(§4 odst. 1, písm. k zákona č. 586/1992 Sb.) v souvislosti s používáním osobního', 10, offset = offset + 5);
-        doc.text('automobilu ve výši 3,50 Kč(*) za ujetý kilometr, tj. celkem: ' + sum + ',- Kč', 10, offset = offset + 5);
+        doc.text('automobilu ve výši 4,- Kč(*) za ujetý kilometr, tj. celkem: ' + sum + ',- Kč', 10, offset = offset + 5);
 
         doc.text('...............................', 30, offset = offset + 20);
         doc.text('...............................', 130, offset);
         doc.setFontSize(10);
         doc.text('Podpis příjemce', 35, offset = offset + 5);
         doc.text('Podpis zástupce z.s.', 135, offset);
-        doc.text('(*) schváleno valnou hromadou dne 23.1.2015', 10, 280);
+        doc.text('(*) schváleno valnou hromadou dne 3.2.2022', 10, 280);
         doc.save('cestovni-nahrady.pdf');
     }
 }

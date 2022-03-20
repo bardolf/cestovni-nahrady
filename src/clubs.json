@@ -401,6 +401,12 @@
         "city":"Herlíkovice",
         "address":"Resort Eden Herlíkovice, Za Řekou 370, 543 02 Vrchlabí",
         "distance":244
+        },
+        {
+        "club":"Robert a Petr šachy, z. s. - Luhačovice",
+        "city":"Luhačovice",
+        "address":"MD kultury, Masarykova 950, 763 26 Luhačovice",
+        "distance":582
         }
    ]
 }

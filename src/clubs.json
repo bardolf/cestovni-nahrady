@@ -407,6 +407,12 @@
         "city":"Luhačovice",
         "address":"MD kultury, Masarykova 950, 763 26 Luhačovice",
         "distance":582
+        },
+        {
+        "club":"TJ Sokol Mšeno",
+        "city":"Mšeno",
+        "address": "Na Skaličkách, Mšeno",
+        "distance":164
         }
    ]
 }

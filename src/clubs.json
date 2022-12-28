@@ -437,6 +437,18 @@
          "city": "Litoměřice",
          "address": "Střelecký ostrov 1008/8, Litoměřice",
          "distance": 156
+      },
+      {
+         "club": "Sokol Brandýs nad Labem",
+         "city": "Brandýs nad Labem",
+         "address": "Palachova 337, Brandýs nad Labem",
+         "distance": 52
+      },
+      {
+         "club": "Hotel FitFun Harachov",
+         "city": "Harrachov",
+         "address": "Ryžoviště 427, Harrachov",
+         "distance": 262
       }
    ]
 }

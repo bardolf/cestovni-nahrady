@@ -449,6 +449,12 @@
          "city": "Harrachov",
          "address": "Ryžoviště 427, Harrachov",
          "distance": 262
+      },
+      {
+         "club": "Hotel Panorama Teplice",
+         "city": "Teplice",
+         "address": "U Panoramy 2959, 415 01, Teplice",
+         "distance": 204
       }
    ]
 }

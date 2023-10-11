@@ -455,6 +455,12 @@
          "city": "Teplice",
          "address": "U Panoramy 2959, 415 01, Teplice",
          "distance": 204
+      },
+      {
+         "club": "Event centrum, Staré Město",
+         "city": "Staré Město",
+         "address": "Náměstí Velké Moravy 2190, 68603 Staré Město",
+         "distance": 516
       }
    ]
 }

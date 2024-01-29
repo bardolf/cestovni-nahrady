@@ -461,6 +461,13 @@
          "city": "Staré Město",
          "address": "Náměstí Velké Moravy 2190, 68603 Staré Město",
          "distance": 516
+      },
+      {
+         "club": "ŠK Lípa",
+         "city": "Hradec Králové",
+         "address": "Škroupova 726/13, Hradec Králové",
+         "distance": 194
       }
+      
    ]
 }

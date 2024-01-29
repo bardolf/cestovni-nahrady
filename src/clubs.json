@@ -467,6 +467,12 @@
          "city": "Hradec Králové",
          "address": "Škroupova 726/13, Hradec Králové",
          "distance": 194
+      },
+      {
+         "club": "ŠK Česká Lípa",
+         "city": "Česká Lípa",
+         "address": "DDM Libertin, Škroupovo náměstí  138, Česká lípa",
+         "distance": 196
       }
       
    ]

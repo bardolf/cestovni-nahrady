@@ -473,6 +473,12 @@
          "city": "Česká Lípa",
          "address": "DDM Libertin, Škroupovo náměstí  138, Česká lípa",
          "distance": 196
+      },
+      {
+         "club": "Šachklub Sokol Klatovy",
+         "city": "Klatovy",
+         "address": "Domažlická 767, Kulturní dům Klatovy, Klatovy",
+         "distance": 284
       }
       
    ]

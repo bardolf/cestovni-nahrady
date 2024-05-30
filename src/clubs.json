@@ -479,6 +479,12 @@
          "city": "Klatovy",
          "address": "Domažlická 767, Kulturní dům Klatovy, Klatovy",
          "distance": 284
+      },
+      {
+         "club": "ŠŠPM Lipky HK",
+         "city": "Hradec Králové",
+         "address": "Tylovo nábřeží 1140, ZŠ Josefa Gočára, Hradec Králové",
+         "distance": 194
       }
       
    ]

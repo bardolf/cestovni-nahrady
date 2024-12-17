@@ -485,7 +485,12 @@
          "city": "Hradec Králové",
          "address": "Tylovo nábřeží 1140, ZŠ Josefa Gočára, Hradec Králové",
          "distance": 194
-      }
-      
+      },
+      {
+         "club": "ŠK Dvorec",
+         "city": "Nepomuk",
+         "address": "U sokolovny 308, Nepomuk",
+         "distance": 230
+      }      
    ]
 }

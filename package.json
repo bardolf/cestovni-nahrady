@@ -4,8 +4,8 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --mode development",
-        "build:production": "webpack --mode production",
-        "build:development": "webpack --mode development"
+        "build:production": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production",
+        "build:development": "NODE_OPTIONS=--openssl-legacy-provider  webpack --mode development"
     },
     "license": "MIT",
     "dependencies": {

@@ -491,6 +491,12 @@
          "city": "Nepomuk",
          "address": "U sokolovny 308, Nepomuk",
          "distance": 230
+      },
+      {
+         "club": "AVE-Kontakt Mariánské lázně",
+         "city": "Mariánské lázně",
+         "address": "Hlavní třída 230/88, Mariánské Lázně",
+         "distance": 358
       }      
    ]
 }

@@ -497,6 +497,12 @@
          "city": "Mariánské lázně",
          "address": "Hlavní třída 230/88, Mariánské Lázně",
          "distance": 358
-      }      
+      },
+      {
+         "club": "TJ Sokol Buštěhrad",
+         "city": "Buštěhrad",
+         "address": "Sokolská 294/2, 273 43 Buštěhrad",
+         "distance": 92
+      }
    ]
 }

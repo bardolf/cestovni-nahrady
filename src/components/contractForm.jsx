@@ -1,6 +1,5 @@
 import React from 'react';
 import Select from 'react-select';
-import autotable from 'jspdf-autotable';
 import ContractGenerator from '../contractGenerator';
 import { saveState, loadState } from '../localStorage';
 import clubService from '../clubService';
@@ -95,49 +94,49 @@ export default class ContractForm extends React.Component {
     render() {
         return (
             <form>
-                <div className="form-group">
-                    <div className="form-row">
+                <div className="mb-3">
+                    <div className="row g-2">
                         <div className="col">
                             <label htmlFor="name">Jméno a příjmení</label>
-                            <input type="text" id="name" className="form-control input-md" value={this.state.name} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte jméno" />
+                            <input type="text" id="name" className="form-control" value={this.state.name} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte jméno" />
                         </div>
                         <div className="col">
                             <label htmlFor="address">Adresa bydliště</label>
-                            <input type="text" id="address" className="form-control input-md" value={this.state.address} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte bydliště" />
+                            <input type="text" id="address" className="form-control" value={this.state.address} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte bydliště" />
                         </div>
                     </div>
                 </div>
 
-                <div className="form-group">
-                    <div className="form-row">
+                <div className="mb-3">
+                    <div className="row g-2">
                         <div className="col-md-3 mb-2">
                             <label htmlFor="contractDate">Datum smlouvy</label>
-                            <input type="text" id="contractDate" className="form-control input-md" value={this.state.contractDate} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte datum" />
+                            <input type="text" id="contractDate" className="form-control" value={this.state.contractDate} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte datum" />
                             <small className="form-text text-muted">Typicky dnešní datum</small>
                         </div>
                         <div className="col-md-3 mb-2">
                             <label htmlFor="account">Číslo účtu</label>
-                            <input type="text" id="account" className="form-control input-md" value={this.state.account} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte číslo účtu" />
+                            <input type="text" id="account" className="form-control" value={this.state.account} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte číslo účtu" />
                         </div>
                         <div className="col-md-6 mb-2">
                             <label htmlFor="action">Událost</label>
-                            <input type="text" id="action" className="form-control input-md" value={this.state.action} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte událost" />
+                            <input type="text" id="action" className="form-control" value={this.state.action} onChange={(e) => this.handleOnChange(e)} placeholder="Zde vyplňte událost" />
                             <small className="form-text text-muted">Událost, akce nebo soutěž, které se smlouva týká</small>
                         </div>
                     </div>
                 </div>
 
                 {this.state.transits.map((transit, idx) => (
-                    <div className="form-group" key={`divTransit${idx}`}>
-                        <div className="form-row">
+                    <div className="mb-3" key={`divTransit${idx}`}>
+                        <div className="row g-2">
                             <div className="col-md-1 mb-0">
                                 <label>{`#${idx + 1}`}</label>
                             </div>
                             <div className="col-md-3 mb-1">
-                                <input type="text" id={`transitDate${idx}`} className="form-control input-md" value={transit.date} onChange={(e) => this.handleTransitDateChange(idx, e.target.value)} placeholder="Datum přepravy" />
+                                <input type="text" id={`transitDate${idx}`} className="form-control" value={transit.date} onChange={(e) => this.handleTransitDateChange(idx, e.target.value)} placeholder="Datum přepravy" />
                             </div>
                             <div className="col-md-2 mb-1">
-                                <input type="text" id={`transitFrom${idx}`} className="form-control input-md" value={transit.from} readOnly />
+                                <input type="text" id={`transitFrom${idx}`} className="form-control" value={transit.from} readOnly />
                             </div>
 
                             <div className="col-md-3 mb-1">
@@ -149,15 +148,19 @@ export default class ContractForm extends React.Component {
                         </div>
                     </div>
                 ))}
-                <div className="form-group">
-                    <div className="form-row">
-                        <button type="button" className="btn btn-primary" onClick={() => this.handleAddTransit()}>Přidat přepravu</button>
+                <div className="mb-3">
+                    <div className="row g-2">
+                        <div className="col-auto">
+                            <button type="button" className="btn btn-primary" onClick={() => this.handleAddTransit()}>Přidat přepravu</button>
+                        </div>
                     </div>
                 </div>
 
-                <div className="form-group">
-                    <div className="form-row">
-                        <button type="button" className="btn btn-success" onClick={() => this.handleGeneratePdf()}>PDF Smlouva</button>
+                <div className="mb-3">
+                    <div className="row g-2">
+                        <div className="col-auto">
+                            <button type="button" className="btn btn-success" onClick={() => this.handleGeneratePdf()}>PDF Smlouva</button>
+                        </div>
                     </div>
                 </div>
 

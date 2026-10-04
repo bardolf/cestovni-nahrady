@@ -1,4 +1,5 @@
-import jsPDF from 'jspdf';
+import { jsPDF } from 'jspdf';
+import { autoTable } from 'jspdf-autotable';
 import clubService from './clubService';
 import { dejavu_serif_font } from './customFonts'
 
@@ -10,8 +11,7 @@ export default class ContractGenerator {
         var doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
         doc.addFileToVFS('DejavuSerif.ttf', dejavu_serif_font);
         doc.addFont('DejavuSerif.ttf', 'DejavuSerif', 'normal');
-        doc.setFont('DejavuSerif');
-        doc.setFontType('normal');
+        doc.setFont('DejavuSerif', 'normal');
 
         doc.setFontSize(24);
         doc.text('SMLOUVA', 80, 20);
@@ -41,7 +41,7 @@ export default class ContractGenerator {
             sum = sum + record.distance * PRICE_KM;
         }
 
-        doc.autoTable({
+        autoTable(doc, {
             head: [['Datum', 'Odkud', 'Kam', 'Vzdálenost', 'Úhrada']],
             body: data,
             // ...

@@ -8,11 +8,15 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     inject: 'body'
 });
 
-module.exports = {
+module.exports = (env, argv) => ({
     entry: './src/index.js',
     output: {
         path: path.resolve('dist'),
-        filename: 'index.[chunkhash].js'
+        filename: 'index.[chunkhash].js',
+        clean: true
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
     module: {
         rules: [
@@ -24,39 +28,35 @@ module.exports = {
                 ]
             },
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: "babel-loader"
-            }, {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: "babel-loader"
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "@babel/preset-env",
+                            ["@babel/preset-react", { runtime: "automatic", development: argv.mode === "development" }]
+                        ]
+                    }
+                }
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
-                use: [
-                    'file-loader?name=images/[name].[ext]',
-                ]
-            },
-            {
-                test: /\.json$/,
-                loader: 'json-loader',
-                type: 'javascript/auto'
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
             },
         ]
-    },
-    node: {
-        fs: 'empty'
     },
     plugins: [
         HtmlWebpackPluginConfig,
         new CompressionPlugin({
-            asset: '[path].gz[query]',
+            filename: '[path][base].gz',
             algorithm: 'gzip',
             test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
             threshold: 10240,
             minRatio: 0.8
         })
-
     ]
-}
+});

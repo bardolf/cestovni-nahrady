@@ -503,6 +503,12 @@
          "city": "Buštěhrad",
          "address": "Sokolská 294/2, 273 43 Buštěhrad",
          "distance": 92
+      },
+      {
+         "club": "TJ Spartak Velká Bíteš",
+         "city": "Velká Bíteš",
+         "address": "Tyršova 617, Velká Bíteš",
+         "distance": 312
       }
    ]
 }
